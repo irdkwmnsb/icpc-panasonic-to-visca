@@ -1,0 +1,39 @@
+version: '3.3'
+
+services:
+  cam1:
+    build: .
+    ports:
+      - 81:80
+    restart: unless-stopped
+    environment:
+      - CAMERA_VISCA_IP=172.24.0.101
+      - CAMERA_VISCA_PORT=80
+      - CAMERA_VISCA_USER=admin
+      - CAMERA_VISCA_PASS=admin
+      - CAMERA_DISPLAY_NAME=oracle1
+      - CAMERA_VISCA_PROFILE_TOKEN=profile_1_h264
+  cam2:
+    build: .
+    ports:
+      - 82:80
+    restart: unless-stopped
+    environment:
+      - CAMERA_VISCA_IP=172.24.0.102
+      - CAMERA_VISCA_PORT=80
+      - CAMERA_VISCA_USER=admin
+      - CAMERA_VISCA_PASS=admin
+      - CAMERA_DISPLAY_NAME=oracle2
+      - CAMERA_VISCA_PROFILE_TOKEN=profile_1_h264
+  cam3:
+    build: .
+    ports:
+      - 83:80
+    restart: unless-stopped
+    environment:
+      - CAMERA_VISCA_IP=172.24.0.103
+      - CAMERA_VISCA_PORT=80
+      - CAMERA_VISCA_USER=admin
+      - CAMERA_VISCA_PASS=admin
+      - CAMERA_DISPLAY_NAME=oracle3
+      - CAMERA_VISCA_PROFILE_TOKEN=profile_1_h264

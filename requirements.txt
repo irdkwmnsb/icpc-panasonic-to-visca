@@ -1,0 +1,4 @@
+uvicorn==0.30.6
+fastapi==0.114.2
+# visca-over-ip==0.4.1
+onvif_zeep==0.2.12
